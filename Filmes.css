@@ -1,0 +1,156 @@
+/*Renderizando a página e tirando barra de rolagem horizontal*/
+body {
+  width: 100%;
+  min-width: 10%;
+  font-family: Dust West, "Roboto Mono", monospace;
+  text-align: center;
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+#barra-pesquisa {
+  width: 45%;
+  height: 40px;
+  padding: 3px;
+  font-size: 18px;
+  text-indent: 10px;
+  outline: none;
+  border-radius: 7px;
+  margin: 15px 5%;
+}
+
+/*Ao clicar na barra de pesquisa aparece uma borda vermelha*/
+#barra-pesquisa:focus{
+  border: 2px solid #e50914;
+  transition: 1ms;
+}
+
+/*Posicionando a lupa de pesquisa dentro da barra de pesquisa*/
+.lupa-pesquisa {
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: 38px;
+  right: 27%;
+  cursor: pointer;
+}
+
+/*Tirando os pontos de marcação e mantendo os menus na horizontal*/
+.menus-filmes ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 10% 3%;
+}
+
+.menus-filmes ul li a{
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*Posicionando o botão de login no topo e à direita da página*/
+.button-login {
+  width: 85px;
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  color: #e50914;
+  border: 4px solid #e50914;
+  background: #ffffff;
+  border: none;
+  font-size: 18px;
+}
+.button-login:hover{
+  color: #ffffff;
+  background: #e50914;
+}
+
+/*Posicionando a logo à esquerda*/ 
+.page-title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 45px;
+  color: #e50914;
+  position: absolute;
+  top: -1%;
+  left: 5%;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.container-logo-imersao-dev{
+  text-align: center;
+}
+
+/*Centralizando a logo da Imersão Dev*/
+.logo-imersao-dev {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  top: 17%;
+  right: 41%;
+}
+
+.content-prévias-filmes{
+  width: 100%;
+  height: auto;
+}
+
+.content-prévias-filmes h2{
+  color: #ffffff;
+  text-align: left;
+  margin: 12px 50px;
+}
+
+.img-prévias-filmes{
+  display: inline-block;
+  width: 127px;
+  height: 127px;
+  border-radius: 50%;
+  margin: 20px 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.img-prévias-filmes:hover{
+  opacity: 0.9;
+}
+
+
+/*Fixando o botão de voltar ao topo à direita e na parte de baixo da página*/
+.return-topo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+/*Ao passar o mouse sobre o botão seu tamanho aumenta*/
+.return-topo:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+body > img {
+  float: left;
+  margin: 8% 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*Ao passar o mouse sobre as imagens dos filmes fica mais opaca a imagem*/
+body > img:hover{
+  opacity: 0.9;
+}
