@@ -1,8 +1,15 @@
+*{
+  font-family: Dust West, "Roboto Mono", monospace;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
 /*Renderizando a página e tirando barra de rolagem horizontal*/
 body {
   width: 100%;
   min-width: 10%;
-  font-family: Dust West, "Roboto Mono", monospace;
   text-align: center;
   background-color: #000000;
   background-size: cover;
@@ -29,12 +36,14 @@ body {
 
 /*Posicionando a lupa de pesquisa dentro da barra de pesquisa*/
 .lupa-pesquisa {
-  width: 30px;
-  height: 20px;
   position: absolute;
   top: 38px;
-  right: 27%;
+  right: 28%;
   cursor: pointer;
+}
+
+.lupa-pesquisa{
+  font-size: 20px;
 }
 
 /*Tirando os pontos de marcação e mantendo os menus na horizontal*/
@@ -67,9 +76,12 @@ body {
   border: none;
   font-size: 18px;
 }
+
+/*Ao passar o mouse sobre o botão de login há uma leve transição de cor*/
 .button-login:hover{
   color: #ffffff;
   background: #e50914;
+  transition: 0.5s;
 }
 
 /*Posicionando a logo à esquerda*/ 
@@ -120,10 +132,10 @@ body {
   background: #ffffff;
   cursor: pointer;
 }
+
 .img-prévias-filmes:hover{
   opacity: 0.9;
 }
-
 
 /*Fixando o botão de voltar ao topo à direita e na parte de baixo da página*/
 .return-topo {
@@ -136,15 +148,22 @@ body {
   position: fixed;
   bottom: 15px;
   right: 15px;
+  z-index: 1;
 }
+
 /*Ao passar o mouse sobre o botão seu tamanho aumenta*/
 .return-topo:hover{
   transform: scale(1.1);
   transition: 0.5s;
 }
 
+.return-topo i{
+  font-size: 20px;
+  padding: 8px 0;
+}
+
 body > img {
-  float: left;
+  display: inline-flex;
   margin: 8% 13px;
   border-radius: 5px;
   cursor: pointer;
