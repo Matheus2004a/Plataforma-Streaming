@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
 *{
-  font-family: Dust West, "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins','Roboto','Source Sans Pro', sans-serif;
+}
+
+:root{
+  --background-header: #4a4a4a;
+  --background-page: #0c0c0c;
+  --color-1: #e50914;
+  --color-2: #fff;
 }
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /*Renderizando a página e tirando barra de rolagem horizontal*/
@@ -11,26 +24,35 @@ body {
   width: 100%;
   min-width: 10%;
   text-align: center;
-  background-color: #000000;
+  background-color: var(--background-page);
   background-size: cover;
   background-repeat: no-repeat;
-  overflow-x: hidden;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--background-header);
+}
+
+a{
+  text-decoration: none;
 }
 
 #barra-pesquisa {
   width: 45%;
   height: 40px;
-  padding: 3px;
   font-size: 18px;
   text-indent: 10px;
   outline: none;
-  border-radius: 7px;
-  margin: 15px 5%;
+  border-radius: 5px;
 }
 
 /*Ao clicar na barra de pesquisa aparece uma borda vermelha*/
 #barra-pesquisa:focus{
-  border: 2px solid #e50914;
+  border: 2px solid var(--color-1);
   transition: 1ms;
 }
 
@@ -46,18 +68,16 @@ body {
   font-size: 20px;
 }
 
-/*Tirando os pontos de marcação e mantendo os menus na horizontal*/
 .menus-filmes ul li{
-  list-style: none;
   display: inline-block;
+  list-style: none;
   margin: 10% 3%;
 }
 
 .menus-filmes ul li a{
   font-size: 20px;
   text-align: center;
-  text-decoration: none;
-  color: #ffffff;
+  color: var(--color-2);
 }
 
 /*Posicionando o botão de login no topo e à direita da página*/
@@ -67,20 +87,16 @@ body {
   border-radius: 5px;
   outline: none;
   cursor: pointer;
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  color: #e50914;
-  border: 4px solid #e50914;
-  background: #ffffff;
+  color: var(--color-1);
+  border: 4px solid var(--color-1);
+  background: var(--color-2);
   border: none;
   font-size: 18px;
 }
 
-/*Ao passar o mouse sobre o botão de login há uma leve transição de cor*/
 .button-login:hover{
-  color: #ffffff;
-  background: #e50914;
+  color: var(--color-2);
+  background: var(--color-1);
   transition: 0.5s;
 }
 
@@ -88,14 +104,11 @@ body {
 .page-title {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 45px;
-  color: #e50914;
-  position: absolute;
-  top: -1%;
-  left: 5%;
+  color: var(--color-1);
 }
 
 .page-subtitle {
-  color: #ffffff;
+  color: var(--color-2);
   margin-top: 5px;
 }
 
@@ -105,8 +118,7 @@ body {
 
 /*Centralizando a logo da Imersão Dev*/
 .logo-imersao-dev {
-  width: 200px;
-  height: auto;
+  width: 12.5rem;
   position: absolute;
   top: 17%;
   right: 41%;
@@ -114,22 +126,21 @@ body {
 
 .content-prévias-filmes{
   width: 100%;
-  height: auto;
 }
 
-.content-prévias-filmes h2{
-  color: #ffffff;
+.content-prévias-filmes h2,.section-lista-filmes h2{
+  color: var(--color-2);
   text-align: left;
   margin: 12px 50px;
 }
 
 .img-prévias-filmes{
   display: inline-block;
-  width: 127px;
-  height: 127px;
-  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  clip-path: circle();
   margin: 20px 10px;
-  background: #ffffff;
+  background: var(--color-2);
   cursor: pointer;
 }
 
@@ -137,11 +148,19 @@ body {
   opacity: 0.9;
 }
 
+.section-lista-filmes{
+  display: flex;
+}
+
+#nome-lista-filmes{
+  color: var(--color-2);
+}
+
 /*Fixando o botão de voltar ao topo à direita e na parte de baixo da página*/
 .return-topo {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  clip-path: circle();
   border: none;
   outline: none;
   cursor: pointer;
@@ -149,12 +168,17 @@ body {
   bottom: 15px;
   right: 15px;
   z-index: 1;
+  transition: 0.5s;
+  transform: translateY(100px);
+}
+
+.return-topo.show-button{
+  transform: translateY(0);
 }
 
 /*Ao passar o mouse sobre o botão seu tamanho aumenta*/
 .return-topo:hover{
   transform: scale(1.1);
-  transition: 0.5s;
 }
 
 .return-topo i{
@@ -162,9 +186,12 @@ body {
   padding: 8px 0;
 }
 
+body > .section-lista-filmes img{
+  display: flex;
+}
+
 body > img {
-  display: inline-flex;
-  margin: 8% 13px;
+  margin: 3rem 13px;
   border-radius: 5px;
   cursor: pointer;
 }
