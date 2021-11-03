@@ -154,36 +154,6 @@ a{
   color: var(--color-2);
 }
 
-/*Fixando o botão de voltar ao topo à direita e na parte de baixo da página*/
-.return-topo {
-  width: 2.2rem;
-  height: 2.2rem;
-  clip-path: circle();
-  border: none;
-  outline: none;
-  cursor: pointer;
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  z-index: 1;
-  transition: 0.5s;
-  transform: translateY(100px);
-}
-
-.return-topo.show-button{
-  transform: translateY(0);
-}
-
-/*Ao passar o mouse sobre o botão seu tamanho aumenta*/
-.return-topo:hover{
-  transform: scale(1.1);
-}
-
-.return-topo i{
-  font-size: 20px;
-  padding: 8px 0;
-}
-
 .container-lista-filmes{
   display: flex;
   position: relative;

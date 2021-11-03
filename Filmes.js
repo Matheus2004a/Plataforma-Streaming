@@ -12,9 +12,3 @@ for (var i = 0; i < listaFilmes.length; i++) {
     document.write(`<h3 id=nome-lista-filmes> ${nomeListaFilmes[i]} </h3>`)
   }
 }
-
-/* Se a altura da janela for maior ou igual a 600 mostra o botão de voltar ao topo, senão ele não aparece */
-const btnVoltaTopoPag = document.querySelector(".return-topo")
-window.addEventListener("scroll", () => {
-  scrollY >= 600 ? btnVoltaTopoPag.classList.add("show-button") : btnVoltaTopoPag.classList.remove("show-button")
-})
