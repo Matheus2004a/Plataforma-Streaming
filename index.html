@@ -12,15 +12,12 @@
 </head>
 
 <body>
-	<!--Âncora do topo da página-->
 	<a name="top-page"></a>
-	<!--Menus dos filmes-->
 	<header>
-		<!--Link site da Alura-->
 		<a href="https://alura.com.br/" target="_blank">
 			<h1 class="page-title">Aluraflix</h1>
 		</a>
-		<input type="text" id="barra-pesquisa" placeholder="Pesquise seu filmes e séries favoritos">
+		<input type="search" id="barra-pesquisa" placeholder="Pesquise seu filmes e séries favoritos">
 		<i class="fas fa-search lupa-pesquisa"></i>
 		<button type="submit" class="button-login">Login</button>
 	</header>
@@ -33,38 +30,39 @@
 		</ul>
 	</nav>
 
-
-	<!--Logo Imersão Dev-->
 	<a href="">
 		<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg"
 			class="logo-imersao-dev">
 	</a>
 
-	<!--Seção de prévias dos filmes-->
-	<section class="content-prévias-filmes">
+	<section class="section-previas-filmes">
 		<h2>Prévias</h2>
 		<img src="https://m.media-amazon.com/images/M/MV5BMjYxYmRlZWYtMzAwNC00MDA1LWJjNTItOTBjMzlhNGMzYzk3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg"
-			class="img-prévias-filmes">
+			class="img-previas-filmes">
 		<img src="https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg"
-			class="img-prévias-filmes">
+			class="img-previas-filmes">
 		<img src="https://m.media-amazon.com/images/M/MV5BZDE3YjY5MzEtYzJlYS00ZjgyLWIzYWUtZmU4Mjk4Y2JhOTQwXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_UY268_CR0,0,182,268_AL_.jpg"
-			class="img-prévias-filmes">
+			class="img-previas-filmes">
 		<img src="https://m.media-amazon.com/images/M/MV5BODJjNmExM2EtMDAyNC00MzAxLWFlZjctMmNjZjc4MmUyODliXkEyXkFqcGdeQXVyMTIyNjkwOTEz._V1_UY268_CR4,0,182,268_AL_.jpg"
-			class="img-prévias-filmes">
+			class="img-previas-filmes">
 		<img src="https://m.media-amazon.com/images/M/MV5BMTc0M2YwNDQtNjIzNi00NjU4LThhZDgtM2VkODYxNDgzM2Q0XkEyXkFqcGdeQXVyOTA1NTMzNjU@._V1_UY268_CR4,0,182,268_AL_.jpg"
-			class="img-prévias-filmes">
+			class="img-previas-filmes">
 		<img src="https://m.media-amazon.com/images/M/MV5BOTY4NDcyZGQtYmVlNy00ODgwLTljYTMtYzQ2OTE3NDhjODMwXkEyXkFqcGdeQXVyNzYzODM3Mzg@._V1_UX182_CR0,0,182,268_AL_.jpg"
-			class="img-prévias-filmes">
+			class="img-previas-filmes">
 		<img src="https://m.media-amazon.com/images/M/MV5BYjQ1NzRhYjYtMWY3My00ODA0LTk5ZDctYjQ4YjE0M2RhMGNiXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_UX182_CR0,0,182,268_AL_.jpg"
-			class="img-prévias-filmes">
+			class="img-previas-filmes">
 		<img src="https://m.media-amazon.com/images/M/MV5BOGU0OWQyMjItYzA4Zi00MDFiLThiZWQtZmEyNWRiODAzYzNmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"
-			class="img-prévias-filmes">
+			class="img-previas-filmes">
 	</section>
 
 	<section class="section-lista-filmes">
 		<h2>Catálogo de filmes</h2>
-		<h3 id="nome-lista-filmes"></h3>
-		<img class="img-lista-filmes" alt="" srcset="">
+		<div class="container-lista-filmes">
+			<picture>
+				<img class="img-lista-filmes" alt="">
+				<h3 id="nome-lista-filmes"></h3>
+			</picture>
+		</div>
 	</section>
 
 	<a href="#top-page">

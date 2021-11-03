@@ -42,30 +42,33 @@ a{
 }
 
 #barra-pesquisa {
-  width: 45%;
+  width: 30%;
   height: 40px;
-  font-size: 18px;
+  font-size: 1rem;
   text-indent: 10px;
+  border: none;
   outline: none;
   border-radius: 5px;
+  position: relative;
+}
+
+#barra-pesquisa::-webkit-search-cancel-button{
+  position: absolute;
+  right: 10%;
 }
 
 /*Ao clicar na barra de pesquisa aparece uma borda vermelha*/
 #barra-pesquisa:focus{
   border: 2px solid var(--color-1);
-  transition: 1ms;
+  transition: 0.2s ease-in-out;
 }
 
 /*Posicionando a lupa de pesquisa dentro da barra de pesquisa*/
 .lupa-pesquisa {
   position: absolute;
-  top: 38px;
-  right: 28%;
+  right: 33%;
+  font-size: 1rem;
   cursor: pointer;
-}
-
-.lupa-pesquisa{
-  font-size: 20px;
 }
 
 .menus-filmes ul li{
@@ -124,18 +127,17 @@ a{
   right: 41%;
 }
 
-.content-prévias-filmes{
+.section-previas-filmes{
   width: 100%;
 }
 
-.content-prévias-filmes h2,.section-lista-filmes h2{
+.section-previas-filmes h2,.section-lista-filmes h2{
   color: var(--color-2);
   text-align: left;
   margin: 12px 50px;
 }
 
-.img-prévias-filmes{
-  display: inline-block;
+.img-previas-filmes{
   width: 8rem;
   height: 8rem;
   clip-path: circle();
@@ -144,12 +146,8 @@ a{
   cursor: pointer;
 }
 
-.img-prévias-filmes:hover{
+.img-previas-filmes:hover{
   opacity: 0.9;
-}
-
-.section-lista-filmes{
-  display: flex;
 }
 
 #nome-lista-filmes{
@@ -186,17 +184,25 @@ a{
   padding: 8px 0;
 }
 
-body > .section-lista-filmes img{
+.container-lista-filmes{
   display: flex;
+  position: relative;
 }
 
-body > img {
-  margin: 3rem 13px;
+.img-lista-filmes {
+  margin: 2rem 10px;
   border-radius: 5px;
   cursor: pointer;
 }
 
 /*Ao passar o mouse sobre as imagens dos filmes fica mais opaca a imagem*/
-body > img:hover{
+.img-lista-filmes:hover{
   opacity: 0.9;
+}
+
+#nome-lista-filmes{
+  position: absolute;
+  bottom: -1rem;
+  text-align: center;
+  left: 3rem;
 }
